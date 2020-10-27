@@ -1,0 +1,129 @@
+
+*{
+  font-family: 'Baloo Da 2', Serif;
+}
+
+.main-container{
+  margin: 0 10rem 10rem 10rem;
+}
+
+.main-container h1{
+    text-align: center;
+    color: #007bb5;
+    font-size: 70px;
+    padding: 30px;
+    font-family: 'Baloo Da 2', Serif;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.carousel-img{
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+  border: none;
+}
+
+h3{
+    padding: 20px;
+}
+
+#itinerary-sentence{
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);;
+}
+
+#about-cities-sentence{
+  text-align: center;
+  text-shadow:0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+#iti-btn{
+  width: 25rem;
+  height: 7rem;
+  border: none;
+  border-radius: 3rem;
+  font-size: 2rem;
+  background-color: #4db8eb;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.but{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+P{
+    padding: 10px;
+    font-family: Serif;
+    font-size: 20px;
+}
+
+.form-horizontal{
+    padding: 20px;
+}
+.submitButton{
+    text-align: center;
+}
+
+.city{
+    font-size: 30px;
+    padding: 20px;
+}
+
+#cityFrame{
+    padding: 30px;
+}
+
+.city-img{
+  border: none;
+  border-radius: 1rem;
+}
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  #fa-email {
+    background: #007bb5;
+    color: white;
+  }
+
+  @media screen and (max-width: 1000px){
+    .main-container{
+        width: 95%;
+        margin: 0 auto;
+    
+    }
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <head>
+        <title>VietGo</title>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name='viewport' content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <div class='main-container'>
+                <h1>Welcome to Vietnam travel guide</h1>
+            
+                <!--Nav-bar-->
+                <nav class='navbar navbar-inverse'>
+                    <div class='container-fluid navbar-right'>
+                        <ul class='nav navbar-nav'>
+                            <li class='active'><a href='main.html'>Home</a></li>
+                            <li><a href='#'>About</a></li>
+                            <li><a href='#'>Contact Us</a></li>
+                        </ul>
+                        <form class='navbar-form navbar-right' action='/action_page.php'>
+                        <div class='input-group'>
+                            <input type='text' class='form-control' placeholder='Search' name='search'>
+                            <div class='input-group-btn'>
+                                <button class='btn btn-default' type='submit'>
+                                    <i class='glyphicon glyphicon-search'></i>
+                                </button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </nav>
+
+
+                <!--Carousel-->
+                <div id='myCarousel' class='carousel slide' data-ride='carousel'>
+                    <!--Indicators-->
+                    <ol class='carousel-indicators'>
+                        <li data-target='#myCarousel' data-slide-to='0' class='active'></li>
+                        <li data-target='#myCarousel' data-slide-to='1'></li>
+                        <li data-target='#myCarousel' data-slide-to='2'></li>
+                    </ol>
+
+                    <!--Wrapper for slides-->
+                    <div class='carousel-inner'>
+                        <div class='item-active'>
+                            <a href="saigon.html">
+                            <img class='carousel-img' src='cityImages/saigon.jpg' alt='Sai Gon' style='width:100%;height: 600px;'>
+                            <div class='carousel-caption'>
+                                <h4>Bustling Sai Gon</h4>
+                            </div>
+                        </a>
+                        </div>
+
+                        <div class='item'>
+                            <a href="hue.html">
+                            <img class='carousel-img' src='cityImages/hue2.jpg' alt='Hue City'>
+                            <div class='carousel-caption'>
+                                <h4>Hue City</h4>
+                            </div>
+                        </a>
+                        </div>
+
+                        <div class= 'item'>
+                            <a href="hanoi.html">
+                            <img class='carousel-img' src='cityImages/hanoi.jpg' alt='Ha Noi' style= 'width:100%; height: 600px;'>
+                            <div class='carousel-caption'>
+                                <h4>Ha Noi Capital</h4>
+                            </div>
+                        </a>
+                        
+                        </div>
+                    </div>
+
+                    <a class='left carousel-control' href='#myCarousel' data-slide='prev'>
+                        <span class='glyphicon glyphicon-chevron-left'></span>
+                        <span class='sr-only'>Previous</span>
+                    </a>
+                    <a class='right carousel-control' href='#myCarousel' data-slide='next'>
+                        <span class='glyphicon glyphicon-chevron-right'></span>
+                        <span class='sr-only'>Next</span>
+                    </a>
+                </div>
+
+                <p style='text-align: justify; padding-top: 30px;'>
+                    If you want to explore Asia, Vietnam is a definitely one of the must-go countries.
+                    You are interested and excited to explore the beautiful Vietnam? 
+                    You want to travel within the budget yet soak it in as much as you can? 
+                    Looking no further, you will find tips and infomation that can only be shared by 
+                    locals. You will be backpacking through some cool places with astonishingly 
+                    cheap prices and creating great expereiences.  
+                </p>
+                <p style="text-align:center; font-weight: bold;"->SIT TIGHT AND EXPLORE!!!!</p>
+
+                    <h3 id='itinerary-sentence'>Click the button below for suggested itinerary</h3>
+                <!--Button pressed for itinerary-->
+                <div class="but">
+                <button id='iti-btn' type='button' data-toggle='collapse' data-target='#suggested_itinerary'>Itinerary</button>
+                <div id='suggested_itinerary' class='collapse'>
+
+                    <!--Form for user input of their itinerary-->
+                    <form class='form-horizontal' action='/itinerary.html'>
+                        <div class='form-group'>
+                            <label class='control-label col-sm-2' for='time'>Planned traveling time: </label>
+                            <div class='col-sm-10'>
+                                <select id='plannedTime' class='form-control'>
+                                    <option></option>
+                                    <option>5 days</option>
+                                    <option>1 week</option>
+                                    <option>2 weeks</option>
+                                    <option>1 month</option>
+                                    <option>2 months or more</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class='form-group'>
+                                <label class='control-label col-sm-2' for='budget'>Allowed budget:</label>
+                                <div class='col-sm-10'>
+                                <select class='form-control' id='budget'>
+                                    <option></option>
+                                    <option>Under $500</option>
+                                    <option>$700</option>
+                                    <option>$1000</option>
+                                    <option>$1500 or more</option>
+                                </select>
+                        </div>
+                    </div>
+                        <div class='form-group'>
+                            <div class='submitButton'>
+                                <button type='submit' class='btn btn-default' id='submitButton' disabled='disabled'>Submit</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+
+        <h3 id='about-cities-sentence'>Explore the beautiful Vietnam in a blink</h3> 
+        <!--city list-->  
+        <div class='container'>
+            <div class='row'>
+                <!--Sai Gon-->
+                    <div class='row' id='cityFrame'>
+                <div class='col-sm-6'>
+                    <a class='city' href='saigon.html'>Ho Chi Minh City</a>
+                    <p>
+                        Known by former name of Saigon. <br />
+                        It is a financial center of VN. <br />
+                        Location: Southeast Vietnam<br />
+                        Population: 13 million (as of 2017)<br />
+                        Area: 796 square miles<br />
+                        <a href='saigon.html' style='text-decoration: underline';>See more</a>
+                    </p>
+                </div>
+                <div class='col-sm-6'>
+                    <img class='city-img' src='cityImages/saigon.jpg' alt='Sai Gon' style='width:50%;height: 200px;'>
+                </div>
+                    </div>
+                <!--Ha Noi-->
+                    <div class='row' id='cityFrame'>
+                <div class='col-sm-6'>
+                    <a class='city' href='hanoi.html'>Ha Noi Capital</a>
+                    <p>
+                        The capital, and also the largest city in VN. <br />
+                        Location: Northern Vietnam<br />
+                        Population: 7.7 million (as of 2018)<br />
+                        Area: 1,285 square miles<br />
+                    <a href='hanoi.html' style='text-decoration: underline';>See more</a>
+                    </p>
+                </div>
+                <div class='col-sm-6'>
+                    <img class='city-img' src='cityImages/hanoi.jpg' alt='Hue' style='width:50%;height: 200px;'>
+                </div>
+                </div>
+
+                <!--Sapa-->
+                <div class='row' id='cityFrame'>
+                <div class='col-sm-6'>
+                    <a class='city' href='sapa.html'>Sapa</a>
+                    <p>
+                        This small town is one of the tourist <br />
+                        acttractions. It is a town located in the <br />
+                        Hoàng Liên Son Mountains. <br />
+                        Location: Northwestern Vietnam<br />
+                        Population: 8,975 (as of 2019)<br />
+                        Area: 9.274 square miles<br />
+                        <a href='sapa.html' style='text-decoration: underline';>See more</a>
+                    </p>
+                </div>
+                <div class='col-sm-6'>
+                    <img class='city-img' src='cityImages/sapa.jpg' alt='Sapa' style='width:50%;height: 200px;'>
+                </div>
+                </div>
+
+                <!--HaLongBay-->
+                <div class='row' id='cityFrame'>
+                <div class='col-sm-6'>
+                    <a class='city' href='halong.html'>Ha Long Bay</a>
+                    <p>
+                        This tourist trap is a UNESCO  <br /> 
+                        World Heritage Site. and a popular <br />
+                        travel destination.Known by <br />
+                        its majestic and wonderful views. <br />
+                        Location: Northeast Vietnam<br />
+                        Population: 1,540 (as of 2019)<br />
+                        Area: 600 square miles<br />
+                        <a href='halong.html' style='text-decoration: underline';>See more</a>
+                    </p>
+                </div>
+                <div class='col-sm-6'>
+                    <img class='city-img' src='cityImages/HLB.jpg' alt='HLB' style='width:50%;height: 200px;'>
+                </div>
+                </div>
+
+                <!--Hue-->    
+                <div class='row' id='cityFrame'>
+                <div class='col-sm-6'>
+                    <a class='city' href='hue.html'>Hue City</a>
+                    <p>
+                        It was the capital of VN during Nguyen Dynasty.<br /> 
+                        Location: Central Vietnam<br />
+                        Population: 455,230 (as of 2018)<br />
+                        Area: 27.29 square miles<br />
+                    <a href='hue.html' style='text-decoration: underline';>See more</a>
+                    </p>
+                </div>
+                <div class='col-sm-6'>
+                    <img class='city-img' src='cityImages/hue2.jpg' alt='Hue' style='width:50%;height: 200px;'>
+                </div>
+                </div>
+
+                <!--HoiAn-->
+                <div class='row' id='cityFrame'>
+                <div class='col-sm-6'>
+                    <a class='city' href='hoian.html'>Hoi An city</a>
+                    <p>
+                        Better known by the name old town Hoi An. <br />
+                        Another UNESCO World Heritage Site of VN.<br />
+                        The small town is peaceful and appealing with <br />
+                        colorful and ancient architectures and heritage. <br />
+                        Attacted to both domestic and international visitors.  <br />
+                        Location: Central coast of Vietnam<br />
+                        Population: 152,160 (as of 2018)<br />
+                        Area: 9.274 square miles<br />
+                        <a href='hoian.html' style='text-decoration: underline';>See more</a>
+                    </p>
+                </div>
+                <div class='col-sm-6'>
+                    <img class='city-img' src='cityImages/hoian.jpg' alt='Sapa' style='width:50%;height: 200px;'>
+                </div>
+                </div>
+
+                <!--Da Nang-->
+                <div class='row' id='cityFrame'>
+                <div class='col-sm-6'>
+                    <a class='city' href='danang.html'>Da Nang City</a>
+                    <p>
+                        One of the big and fast-growing cities. <br />
+                        Very safe and clean and cool in general.<br />
+                        Location: South Central of Vietnam<br />
+                        Population: 1.231 million (as of 2019)<br />
+                        Area: 496.3 square miles<br />
+                        <a href='danang.html' style='text-decoration: underline';>See more</a>
+                    </p>
+                </div>
+                <div class='col-sm-6'>
+                    <img class='city-img' src='cityImages/danang.jpg' alt='Da Nang' style='width:50%;height: 200px;'>
+                </div>
+                </div>
+
+                <!--MeKong-->
+                <div class='row' id='cityFrame'>
+                <div class='col-sm-6'>
+                    <a class='city' href='mekong.html'>Mekong River Delta</a>
+                    <p>
+                        A fascinating and impressive area <br />
+                        near Saigon. This will magically<br/>
+                        satisfy your sense of curiosity with<br />
+                         rural and coarse-grained lifestyle<br />
+                        Main means of transportation are boats <br/>
+                        Location: Southern Vietnam<br />
+                        Population: 21.49 million (as of 2019)<br />
+                        Area: 15,667 square miles<br />
+                        <a href='mekong.html' style='text-decoration: underline';>See more</a>
+                    </p>
+                </div>
+                <div class='col-sm-6'>
+                    <img class='city-img' src='cityImages/mekong.jpg' alt='MK' style='width:50%;height: 200px;'>
+                </div>
+                </div>
+
+                <!--Can Tho-->
+                <div class='row' id='cityFrame'>
+                <div class='col-sm-6'>
+                    <a class='city' href='cantho.html'>Can Tho</a>
+                    <p>
+                        The heart and financial center of <br />
+                        Me Kong Delta. Well-known for its <br />
+                        charming floating market <br />
+                        Location: Southern Vietnam<br />
+                        Population: 1.569 million (as of 2019)<br />
+                        Area: 544 square miles<br />
+                        <a href='cantho.html' style='text-decoration: underline';>See more</a>
+                    </p>
+                </div>
+                <div class='col-sm-6'>
+                    <img class='city-img' src='cityImages/cantho.jpg' alt='Can Tho' style='width:50%;height: 200px;'>
+                </div>
+                </div>
+
+                
+                <!--DaLat-->
+                <div class='row' id='cityFrame'>
+                <div class='col-sm-6'>
+                    <a class='city' href='dalat.html'>Da Lat</a>
+                    <p>
+                        Has 4 seasons in a day. Attacted to both <br />
+                        domestic and international visitors.   <br />
+                        Location: Southern parts of the Central <br />
+                        Highlands of Vietnam<br />
+                        Population: 406,105 (as of 2015)<br />
+                        Area: 152.37 square miles<br />
+                        <a href='dalat.html' style='text-decoration: underline';>See more</a>
+                    </p>
+                </div>
+                <div class='col-sm-6'>
+                    <img class='city-img' src='cityImages/dalat.jpg' alt='Sapa' style='width:50%;height: 200px;'>
+                </div>
+                </div>
+
+                </div>
+            </div>
+            </div>
+            <!--Footer-->
+            <div class="jumbotron text-center" style="margin-bottom:0">
+             
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <a href='https://www.facebook.com/trang.le.5477' class='fa fa-facebook' ></a>
+                    </div>
+                    <div class='col-sm-3'>
+                        <a href='https://www.instagram.com/tlee_91/' class='fa fa-instagram' ></a>
+                    </div>
+                    <div class='col-sm-3'>
+                        <a href='https://www.linkedin.com/in/trang-le-42a005b8/' class='fa fa-linkedin' ></a>
+                    </div>
+                    <div class='col-sm-3'>
+                        <a href = "mailto:tlee.bon@gmail.com" id='fa-email' class='fa fa-envelope' ></a>
+                    </div>
+                </div>
+            </div>       
+    </body>
+</html>
