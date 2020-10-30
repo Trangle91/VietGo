@@ -137,3 +137,19 @@ p{
     margin-right: auto;
     width: 80%;
   }
+
+.scroll-btn{
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #e2b646;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 .1rem .6rem rgba(0, 0, 0, 0.2);
+    border-radius: .2rem;
+}
