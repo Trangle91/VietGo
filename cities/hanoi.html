@@ -18,7 +18,7 @@
             <nav class='navbar navbar-inverse'>
                     <div class='container-fluid navbar-right'>
                         <div class='navbar-header'>
-                            <a class='navbar-brand' href='vietGo.html'>VietGo</a>
+                            <a class='navbar-brand' href='https://vietgo.netlify.app/'>VietGo</a>
                         </div>
 
                         <ul class='nav navbar-nav'>
@@ -48,7 +48,7 @@
             <img src='cityImages/hanoi.jpg' alt='Ha Noi' class="center" style='width:100%;height: 500px; padding-bottom: 20px;'>
             
             <p class='modau'>
-Ha Noi capital, in my opinion, is very peaceful and beautiful. This used to be one of my summer treats every year when I was little.
+Ha Noi capital is very peaceful and beautiful. This used to be one of my summer treats every year when I was little.
 I had tried a lot of food and experienced Ha noi as a real local. I spoke their accent, and excitedly enjoyed their food. It has been 
 ten years that I have not traveled there, but it always remains a gently loving image in my childhood memories. 
 Let's dive into the charming old quarter.
@@ -203,7 +203,7 @@ the Ngoc Son Temple. You can stop for an iced coffee at the outdoor Hapro Café 
 rest of the morning.
 
 <img src='cityImages/hoguom2.jpeg' alt='Ho Guom' class='pageImages'>
-<figcaption style='text-align:center;font-size:15px;padding-top: 15px;'>Hoan Kiem Lake in the morning :)</figcaption>
+<figcaption style='text-align:center;font-size:15px;padding-top: 15px;'>Hoan Kiem Lake in the morning</figcaption>
 
 <!--Van Mieu-->
     <h4><a class='places' href='https://en.wikipedia.org/wiki/Temple_of_Literature,_Hanoi'>The Temple of Literature</a></h4>
@@ -374,6 +374,38 @@ rest of the morning.
 
     
     </div>
+            
+            <div class="comment">
+      <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" style="width:100%;" placeholder="write a comment......"></textarea>
+      <input type="submit" value="Post" onclick="insert()" style="width:40px;" /></form>
+      </div>
+      <div id="display"></div>
+
+      <script type="text/javascript">
+        var titles = [];
+        var titleInput = document.getElementById("title");
+        var messageBox = document.getElementById("display");
+        function Allow()
+        {
+        if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+        {
+        user.title.value="";
+        alert("Please Enter only alphabets");
+        }
+        window.location.reload()
+        }
+        function insert () {
+        titles.push(titleInput.value);
+        clearAndShow();
+        }
+        function clearAndShow ()
+        {
+        titleInput.value = "";
+        messageBox.innerHTML = "";
+        messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+        }
+        </script>
+        
         </div> 
     </body>
 </html>
